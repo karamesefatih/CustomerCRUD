@@ -11,5 +11,6 @@ namespace DataAccess.Interfaceler
    
     public interface ICustomerDal : IEntityRepository<tb_customer>
     {
+        List<tb_customer> GetByCustomerName(string customerName);
     }
 }

@@ -17,18 +17,25 @@ public class CustomerController : ControllerBase
         }
 
         [HttpGet]
-        public IActionResult GetAll()
+        public IActionResult Get()
         {
             var result = _customerService.GetAll();
             if (result.Success) return Ok(result);
-            return BadRequest();
+            return BadRequest(result);
+        }
+        [HttpGet("getByCustomerName/{customerName}")]
+        public IActionResult getByName(string customerName)
+        {
+
+            var resullt = _customerService.GetByCustomerName(customerName);
+            if (resullt.Success) return Ok(resullt);
+            return BadRequest(resullt);
         }
         [HttpPost]
         public IActionResult Post(tb_customer tb_Customer)
         {
-            var result = _customerService.Add_Customer(tb_Customer);
-            if (result.Success) return Ok(result);
-            return BadRequest();
+            Console.WriteLine(tb_Customer.name);
+            return Ok("SDAASDSA");
         }
         [HttpPut]
         public IActionResult Put(tb_customer tb_Customer)

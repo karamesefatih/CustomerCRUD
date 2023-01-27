@@ -37,6 +37,11 @@ namespace Bussiness.Managers
             
         }
 
+        public IDataResult<List<tb_customer>> GetByCustomerName(string customerName)
+        {
+            return new SuccessDataResult<List<tb_customer>>(_customerDal.GetByCustomerName(customerName));
+        }
+
         public IResult Update_Customer(tb_customer tb_Customer)
         {
             _customerDal.Update(tb_Customer);

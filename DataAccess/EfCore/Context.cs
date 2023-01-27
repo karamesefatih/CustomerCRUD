@@ -14,7 +14,7 @@ namespace DataAccess.EfCore
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //optionsBuilder.UseNpgsql(@"Host=localhost;Port=5442;Username=postgres;Password=saadet2000;Database=postgres");
-            optionsBuilder.UseNpgsql(@"Server=xxx;Database=xxx; Port=xxx; Ssl Mode = Disable; User Id =xxx; Password=xxx");
+            optionsBuilder.UseNpgsql(@"Server=172.16.64.12;Database=deneme2; Port=5432; Ssl Mode = Disable; User Id =mefule; Password=ikonel423806");
         }
     }
 }

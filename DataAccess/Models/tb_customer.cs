@@ -13,5 +13,6 @@ namespace DataAccess.Models
         public string? name { get; set; }
         public string? lastname { get; set; }
         public string? content { get; set; }
+
     }
 }
